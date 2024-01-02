@@ -1,0 +1,17 @@
+{
+    "name": "mireknguyen/mailer",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mirek Nguyen",
+            "email": "mireknguyenbinh@seznam.cz"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
