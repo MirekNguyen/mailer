@@ -21,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             || empty($_ENV["MAILER_USER"])
             || empty($_ENV["MAILER_PASS"])
             || empty($_ENV["MAILER_EMAIL_TO"])
+            || empty($_ENV["MAILER_PORT"])
         ) {
             throw new Exception("Environment variables not set");
         }
