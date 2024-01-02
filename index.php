@@ -11,7 +11,7 @@ header("Access-Control-Allow-Origin: *");
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     try {
         $message = htmlspecialchars($_POST["message"]);
-        $subject = htmlspecialchars($_POST["name"]);
+        $subject = htmlspecialchars($_POST["subject"]);
         $email = filter_var($_POST["email"], FILTER_VALIDATE_EMAIL);
         if (!$email) {
             throw new Exception("Invalid email");
