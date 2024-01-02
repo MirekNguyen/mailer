@@ -16,6 +16,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!$email) {
             throw new Exception("Invalid email");
         }
+        if (empty($message) || empty($subject) || empty($email)) {
+            throw new Exception("Missing required fields");
+        }
+
         if (
             empty($_ENV["MAILER_HOST"])
             || empty($_ENV["MAILER_USER"])
